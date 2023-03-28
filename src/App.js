@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import './App.css';
+import BottomNav from './component/BottomNav';
+import UserPage from './pages/UserPage';
+import Calendar from './pages/Calendar';
+import TodoList from "./pages/TodoList";
+import TopNav from "./component/TopNav";
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopNav />
+      <main className="main">
+        <Routes>
+        <Route path="/" element={<Calendar />} />
+        <Route path="/todolist" element={<TodoList />} />
+        <Route path="/userpage" element={<UserPage />} />
+        </Routes>
+      </main>
+      <BottomNav />
     </div>
+    </BrowserRouter>
   );
 }
 
