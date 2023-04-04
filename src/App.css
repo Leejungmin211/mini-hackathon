@@ -7,6 +7,13 @@
 
 :root {
    --main-border-color: var(--gray-100); /*#f0f0f0*/
+   --color-bg-dark: #f5f5f5;
+   --color-bg: #fdfffd;
+   --color-grey: #d1d1d1;
+   --color-text: #22243b;
+   --color-accent: #c091e7;
+   --color-white: white;
+   --color-scrollbar: #aaa7a7;
 }
 
 body {
@@ -21,22 +28,44 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   background: rgb(70,70,73);
-   background: linear-gradient(90deg, rgba(70,70,73,1) 1%, rgba(80,77,94,1) 32%, rgba(125,126,131,1) 100%);
+   /*background: rgb(70,70,73);
+   background: linear-gradient(90deg, rgba(70,70,73,1) 1%, rgba(80,77,94,1) 32%, rgba(125,126,131,1) 100%);*/
+   background-image:linear-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  ),url("https://images.unsplash.com/photo-1563291074-2bf8677ac0e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=707&q=80");
+   background-size: cover;
    font-size: 1.2rem;
   }
 
 .App {
     display: flex;
     flex-direction: column;
-    width: 390px;
-    height: 844px;
-    padding: 20px;
-    background-color: white;
+    width: 800px;
+    height: 850px;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 0.637);
+    border-radius: 10px;
 }
 
 .main {
-   width: 350px;
-   height: 667px;
-   padding: 10px;
+   height: 700px;
+   padding: 20px;
+   justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
 }

@@ -1,4 +1,7 @@
-
+import { useState } from "react";
+import { BiHomeHeart } from 'react-icons/bi';
+import { BiCalendarHeart } from 'react-icons/bi';
+import { BiUserCircle } from 'react-icons/bi';
 import { Link } from "react-router-dom";
 import styled from "styled-components"
 
@@ -7,18 +10,40 @@ const Nav = styled.nav`
   justify-content: space-around;
   align-items: center;
   position: relative;
-`
-const Img = styled.img`
-  width: 80px;
-`
+  margin-bottom: 20px;
 
-
+  .home{
+    width: 65px;
+    height: 65px;
+    color: #AFAFAF;
+  }
+  .calendar{
+    width: 60px;
+    height: 60px;
+    color: #AFAFAF;
+  }
+  .user{
+    width: 62px;
+    height: 62px;
+    color: #AFAFAF;
+  }
+  .active{
+    color: #6541da;
+  }
+`
 export default function BottomNav(){
+  const [activeNav, setActiveNav] = useState(1)
     return(
         <Nav>
-            <Link to="/"><Img src="../home-gray.png" alt="user" /></Link>
-            <Link to="/todolist"><Img src="../todolist-gray.png" alt="todolist" /></Link>
-            <Link to="/userpage"><Img src="../user-gray.png" alt="todolist" /></Link>
+            <Link to="/" onClick={() => setActiveNav(1)}>
+              <BiCalendarHeart className={activeNav === 1? "calendar active" : "calendar"}/>
+            </Link>
+            <Link to="/todolist" onClick={() => setActiveNav(2)}>
+              <BiHomeHeart className={activeNav === 2? "home active" : "home"} />
+            </Link>
+            <Link to="/userpage" onClick={() => setActiveNav(3)}>
+              <BiUserCircle className={activeNav === 3? "user active" : "user"} />
+            </Link>
         </Nav>
     )
 }

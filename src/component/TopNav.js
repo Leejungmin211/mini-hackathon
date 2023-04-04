@@ -4,7 +4,8 @@ const Nav = styled.nav`
 display: flex;
 justify-content: space-between;
 align-items: center;
-height: 50px;
+padding: 10px 40px;
+height: 70px;
 `
 
 const Logo = styled.div`
