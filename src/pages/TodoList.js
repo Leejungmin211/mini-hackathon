@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styled from "styled-components"
 import TodoListDate from "../component/TodoListDate"
 
@@ -6,24 +6,28 @@ const Section = styled.section`
 height: 100%;
 overflow: auto;
 display: flex;
-    justify-content: center;
+justify-content: center;
 `
-
 export default function TodoList() {
   const today = koreaDate()
   const tomorrow = koreaNextDate()
-  const [todos, setTodos] = useState([
-       { id: '1', text: '운동하기', status: 'Active', date: today },
-       { id: '2', text: '공부하기', status: 'Active', date: today },
-       { id: '3', text: '리액트 공부하기', status: 'Active', date: tomorrow },
-   ])
+  const [todos, setTodos] = useState(() => readTodos());
+    
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
-    return(
-        <Section>
-          <TodoListDate today={today} tomorrow={tomorrow} todos={todos} setTodos={setTodos}/>
-         
-        </Section>
+  return(
+      <Section>
+        <TodoListDate today={today} tomorrow={tomorrow} todos={todos} setTodos={setTodos}/>   
+      </Section>
     )
+}
+
+function readTodos() {
+  console.log('readTodos');
+  const todos = localStorage.getItem('todos');
+  return todos ? JSON.parse(todos) : [];
 }
 
 function koreaDate() {
@@ -54,3 +58,4 @@ function koreaNextDate() {
   
   return `${dateString} ${dayName}`;
 }
+

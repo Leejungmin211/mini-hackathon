@@ -32,7 +32,7 @@
   }
   
   .react-calendar button {
-    margin: 25px 0px;
+    margin: 23px 0px;
     font-size: 15px;
     border: 0;
     outline: none;
@@ -44,7 +44,7 @@
   
   .react-calendar__navigation {
     display: flex;
-    height: 80px;
+    height: 70px;
     margin-bottom: 1em;
   }
   

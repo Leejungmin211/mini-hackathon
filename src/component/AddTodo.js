@@ -3,70 +3,56 @@ import { v4 as uuidv4 } from "uuid";
 import { RiHeartAddLine } from 'react-icons/ri';
 import styled from "styled-components"
 
- const ModalBackdrop = styled.div`
+ const Div = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  position: fixed;
-  z-index: 1;
+  flex-direction: column;
+  margin: 20px 0px 10px 0px;
 `;
-
-const ModalView = styled.div.attrs((props) => ({
-    role: 'dialog',
-  }))`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    background-color: white;
-    width: 300px;
-    height: 250px;
-    border-radius: 30px;
-    > button {
-      background-color: #ffffff00;
-      color: black;
-      border: none;
-      font-size: 20px;
-    }
-  `;
+const Form =styled.form`
+margin: 15px 0px;
+   > .add-button{
+    border: 2px solid #fcc8d1;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgb(252 200 209 / 75%), #ffe6e670);
+    font-size: 20px;
+    width: 60px;
+    height: 45px;
+     &:hover{
+      background: linear-gradient(180deg, #ffe6e670, rgb(252 200 209 / 75%));
+      transition: all 3s;
+     }
+   }
+`
   const Input = styled.input`
-  width: 200px;
-  height: 35px;
+  width: 390px;
+  height: 45px;
+  font-size: 15px;
   margin-right: 10px;
-  border-radius: 5px;
-  border: 1px solid #880d88;
+  border-radius: 10px;
+  border: none;
   padding: 0px 10px;
+    &:focus{
+      outline: 2px solid #fcc8d1;
+    }
   `
   const Button = styled.button`
   border: none;
   background-color: #ffffff00;
   margin-right: 10px;
    > .heart-add{
-    width: 25px;
-    height: 25px;
-    color: #555555;
+    width: 30px;
+    height: 30px;
+    color: rgb(111 111 111);
    }
-  `
-  const DayInput = styled.input`
-  width: 35px;
-  height: 35px;
-  margin: 0px 10px;
-  `
-  const Daylabel = styled.label`
-  font-size: 15px;
   `
 
 export default function AddTodo({onAdd, today, tomorrow}) {
     const [isOpen, setIsOpen] = useState(false)
     const [text, setText] = useState('')
 
-    const openModalHandler = () => {setIsOpen(!isOpen)}
+    const openInputHandler = () => {setIsOpen(!isOpen)}
     const handleTextChange = (e) => {setText(e.target.value)}
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -84,17 +70,12 @@ export default function AddTodo({onAdd, today, tomorrow}) {
     }
   
   return (
-    <div>
-        <Button onClick={openModalHandler}><RiHeartAddLine className="heart-add"/></Button>
-        {isOpen? <ModalBackdrop onClick={openModalHandler}>
-            <ModalView onClick={(e) => e.stopPropagation()}>
-            <button onClick={openModalHandler}><img src="../close.png" /></button>
-             <form onSubmit={handleSubmit}>
-             <Input type="text" placeholder="Todo를 입력해주세요" value={text} onChange={handleTextChange}/>
-             <button>Add</button>
-             </form>
-            </ModalView>
-        </ModalBackdrop> : null}
-    </div>
+    <Div>
+         {isOpen && <Form onSubmit={handleSubmit}>
+           <Input type="text" placeholder="Todo를 입력해주세요" value={text} onChange={handleTextChange}/>
+           <button className="add-button">Add</button>
+           </Form>}
+           <Button onClick={openInputHandler}><RiHeartAddLine className="heart-add"/></Button>
+    </Div>
   )
 }

@@ -28,16 +28,29 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   /*background: rgb(70,70,73);
-   background: linear-gradient(90deg, rgba(70,70,73,1) 1%, rgba(80,77,94,1) 32%, rgba(125,126,131,1) 100%);*/
    background-image:linear-gradient(
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.1)
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3)
   ),url("https://images.unsplash.com/photo-1563291074-2bf8677ac0e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=707&q=80");
    background-size: cover;
    font-size: 1.2rem;
   }
 
+.app-wrapper{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.weather{
+  display: flex;
+  margin: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 .App {
     display: flex;
     flex-direction: column;
@@ -45,6 +58,7 @@ body {
     height: 850px;
     padding-top: 10px;
     background-color: rgba(255, 255, 255, 0.637);
+    box-shadow: 3px 3px 15px 6px #c7abb063, -3px -3px 19px 2px #fff;
     border-radius: 10px;
 }
 

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { RiCloseFill } from 'react-icons/ri';
 
 const Li = styled.li`
 display: flex;
@@ -7,7 +8,7 @@ justify-content: space-between;
 border-radius: 10px;
 height: 55px;
 margin: 7px;
-padding: 10px;
+padding: 10px 15px;
 font-size: 17px;
 letter-spacing: 0.7px;
 background-color: #dde9f3;
@@ -20,11 +21,10 @@ padding: 0px 10px;
 `
 const Button = styled.button`
 border: none;
-background-color: white;
-`
-const Img = styled.img`
-width: 12px;
-heigth; 12px;
+background: rgba(255, 255, 255, 0);
+  > .close-icon{
+    font-size: 20px;
+  }
 `
 
 export default function Todo({todo, onUpdate, onDelete}) {
@@ -39,7 +39,7 @@ export default function Todo({todo, onUpdate, onDelete}) {
           <input type="checkbox" id="checkbox" checked={status === 'Completed'} onChange={handleChange}/>
           <label htmlFor="checkbox">{text}</label>
           </Div>
-          <Button onClick={() => onDelete(todo)}><Img src="../close.png" /></Button>
+          <Button onClick={() => onDelete(todo)}><RiCloseFill className="close-icon"/></Button>
         </Li>
     )
 }

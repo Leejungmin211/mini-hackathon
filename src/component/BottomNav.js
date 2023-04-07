@@ -29,6 +29,7 @@ const Nav = styled.nav`
   }
   .active{
     color: #6541da;
+    transition: 1s;
   }
 `
 export default function BottomNav(){
