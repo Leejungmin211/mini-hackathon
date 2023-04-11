@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmini_hackathon=self.webpackChunkmini_hackathon||[]).push([[2],{765:function(n,e,i){i.r(e),i.d(e,{default:function(){return r}});var t,a,c=i(168),s=i(6444),h=i(184),u=s.ZP.nav(t||(t=(0,c.Z)(["\ndisplay: flex;\njustify-content: space-between;\nalign-items: center;\npadding: 10px 40px;\nheight: 70px;\n"]))),p=s.ZP.div(a||(a=(0,c.Z)(["\nfont-size: 35px;\n"])));function r(){return(0,h.jsx)(u,{children:(0,h.jsx)(p,{children:"Todo"})})}}}]);
+//# sourceMappingURL=2.c813027d.chunk.js.map

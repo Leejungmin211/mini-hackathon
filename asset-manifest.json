@@ -1,15 +1,40 @@
 {
   "files": {
-    "main.css": "/mini-hackathon/static/css/main.0c4f2b57.css",
-    "main.js": "/mini-hackathon/static/js/main.2e6ce0ca.js",
+    "main.css": "/mini-hackathon/static/css/main.95595ce2.css",
+    "main.js": "/mini-hackathon/static/js/main.3b73f9a3.js",
+    "static/css/345.18d91484.chunk.css": "/mini-hackathon/static/css/345.18d91484.chunk.css",
+    "static/js/345.5c751436.chunk.js": "/mini-hackathon/static/js/345.5c751436.chunk.js",
+    "static/js/667.a2593199.chunk.js": "/mini-hackathon/static/js/667.a2593199.chunk.js",
+    "static/js/581.3ec8bb26.chunk.js": "/mini-hackathon/static/js/581.3ec8bb26.chunk.js",
+    "static/js/2.c813027d.chunk.js": "/mini-hackathon/static/js/2.c813027d.chunk.js",
+    "static/js/547.f2127c4a.chunk.js": "/mini-hackathon/static/js/547.f2127c4a.chunk.js",
+    "static/js/887.2c223d2a.chunk.js": "/mini-hackathon/static/js/887.2c223d2a.chunk.js",
     "static/js/787.541cc5cf.chunk.js": "/mini-hackathon/static/js/787.541cc5cf.chunk.js",
+    "static/js/881.a5d9af59.chunk.js": "/mini-hackathon/static/js/881.a5d9af59.chunk.js",
+    "static/js/384.801b1783.chunk.js": "/mini-hackathon/static/js/384.801b1783.chunk.js",
+    "static/js/823.f33f1981.chunk.js": "/mini-hackathon/static/js/823.f33f1981.chunk.js",
+    "static/js/793.9eba63d1.chunk.js": "/mini-hackathon/static/js/793.9eba63d1.chunk.js",
+    "static/js/692.4cd970a8.chunk.js": "/mini-hackathon/static/js/692.4cd970a8.chunk.js",
+    "static/media/kitty.jpg": "/mini-hackathon/static/media/kitty.b36408e9364f757d7d5c.jpg",
     "index.html": "/mini-hackathon/index.html",
-    "main.0c4f2b57.css.map": "/mini-hackathon/static/css/main.0c4f2b57.css.map",
-    "main.2e6ce0ca.js.map": "/mini-hackathon/static/js/main.2e6ce0ca.js.map",
-    "787.541cc5cf.chunk.js.map": "/mini-hackathon/static/js/787.541cc5cf.chunk.js.map"
+    "main.95595ce2.css.map": "/mini-hackathon/static/css/main.95595ce2.css.map",
+    "main.3b73f9a3.js.map": "/mini-hackathon/static/js/main.3b73f9a3.js.map",
+    "345.18d91484.chunk.css.map": "/mini-hackathon/static/css/345.18d91484.chunk.css.map",
+    "345.5c751436.chunk.js.map": "/mini-hackathon/static/js/345.5c751436.chunk.js.map",
+    "667.a2593199.chunk.js.map": "/mini-hackathon/static/js/667.a2593199.chunk.js.map",
+    "581.3ec8bb26.chunk.js.map": "/mini-hackathon/static/js/581.3ec8bb26.chunk.js.map",
+    "2.c813027d.chunk.js.map": "/mini-hackathon/static/js/2.c813027d.chunk.js.map",
+    "547.f2127c4a.chunk.js.map": "/mini-hackathon/static/js/547.f2127c4a.chunk.js.map",
+    "887.2c223d2a.chunk.js.map": "/mini-hackathon/static/js/887.2c223d2a.chunk.js.map",
+    "787.541cc5cf.chunk.js.map": "/mini-hackathon/static/js/787.541cc5cf.chunk.js.map",
+    "881.a5d9af59.chunk.js.map": "/mini-hackathon/static/js/881.a5d9af59.chunk.js.map",
+    "384.801b1783.chunk.js.map": "/mini-hackathon/static/js/384.801b1783.chunk.js.map",
+    "823.f33f1981.chunk.js.map": "/mini-hackathon/static/js/823.f33f1981.chunk.js.map",
+    "793.9eba63d1.chunk.js.map": "/mini-hackathon/static/js/793.9eba63d1.chunk.js.map",
+    "692.4cd970a8.chunk.js.map": "/mini-hackathon/static/js/692.4cd970a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c4f2b57.css",
-    "static/js/main.2e6ce0ca.js"
+    "static/css/main.95595ce2.css",
+    "static/js/main.3b73f9a3.js"
   ]
 }
