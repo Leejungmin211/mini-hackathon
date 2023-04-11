@@ -1,6 +1,6 @@
-import { useState } from "react"
 import styled from "styled-components"
 import UserInput from "../component/UserInput"
+import MyImage from "../image/kitty.jpg";
 
 const UserContainer = styled.div`
 display: flex;
@@ -23,7 +23,7 @@ export default function UserPage(){
     return(
         <UserContainer>
           <Div>
-          <div><Img src="../kitty.jpg" /></div>  
+          <Img src={MyImage} /> 
           <UserInput />
           </Div>
         </UserContainer>

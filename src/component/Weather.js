@@ -74,7 +74,7 @@ export default function Weather(){
     return(
         <WeatherContainer>
           <Select value={city} onChange={handleChage}>
-            <option selected value="Seoul">서울</option>
+            <option value="Seoul">서울</option>
             <option value="Gyeonggi-do">경기도</option>
             <option value="Gangneung-si">강릉</option>
             <option value="Daejeon">대전</option>
