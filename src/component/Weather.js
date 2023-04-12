@@ -60,7 +60,6 @@ export default function Weather(){
                 url : url
             })
            .then(res => {
-            console.log(res)
             setTemp(Math.round(((res.data.main.temp - 273.15) * 10)) / 10)
             setSky(res.data.weather[0].main)
             setIcon(res.data.weather[0].icon)
