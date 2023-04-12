@@ -19,6 +19,12 @@ padding: 0px 10px;
      margin-right: 10px;
   }
 `
+const Input = styled.input`
+width: 15px;
+height: 15px;
+border: 2px solid rgb(9 78 171);
+border-radius: 4px;
+`
 const Button = styled.button`
 border: none;
 background: rgba(255, 255, 255, 0);
@@ -36,7 +42,7 @@ export default function Todo({todo, onUpdate, onDelete}) {
     return(
         <Li>
           <Div>
-          <input type="checkbox" id="checkbox" checked={status === 'Completed'} onChange={handleChange}/>
+          <Input type="checkbox" id="checkbox" checked={status === 'Completed'} onChange={handleChange}/>
           <label htmlFor="checkbox">{text}</label>
           </Div>
           <Button onClick={() => onDelete(todo)}><RiCloseFill className="close-icon"/></Button>

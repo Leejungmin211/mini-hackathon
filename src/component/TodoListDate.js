@@ -25,7 +25,6 @@ justify-content: space-between;
     padding-left: 15px;
   }
 }
- 
 `
 const Ul = styled.ul`
 margin-bottom: 70px;
@@ -44,8 +43,6 @@ export default function TodoListDate({today, tomorrow, todos, setTodos}) {
   const tomorrowPlan = todos.filter((todo) => {
     if(todo.status === 'Active' && todo.date === tomorrow) return todo
   })
-
-  console.log(todos)
   
   const todayTodo = todos.filter((todo) => {
     if(todo.date === today) return todo
