@@ -1,16 +1,19 @@
 import React from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import BottomNav from './component/BottomNav';
-import UserPage from './pages/UserPage';
-import MainCalendar from './pages/MainCalendar';
-import TodoList from "./pages/TodoList";
-import TopNav from "./component/TopNav";
-import Weather from "./component/Weather";
+import { Suspense, lazy } from 'react';
 import './App.css';
+
+const MainCalendar = lazy(() => import('./pages/MainCalendar'));
+const TodoList = lazy(() => import("./pages/TodoList"));
+const UserPage = lazy(() => import('./pages/UserPage'));
+const TopNav = lazy(() => import('./component/TopNav'));
+const Weather = lazy(() => import('./component/Weather'));
+const BottomNav = lazy(() => import('./component/BottomNav'));
 
 function App() {
   return (
     <BrowserRouter>
+    <Suspense fallback={<div>Loading...</div>}>
     <div className="app-wrapper">
       <div className="weather">
         <Weather />
@@ -27,6 +30,7 @@ function App() {
       <BottomNav />
     </div>
     </div>
+    </Suspense>
     </BrowserRouter>
   );
 }
