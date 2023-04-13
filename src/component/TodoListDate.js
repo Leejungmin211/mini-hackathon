@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import Todo from "./Todo"
 import AddTodo from "./AddTodo"
-import { useState } from "react"
-import TodoList from "../pages/TodoList"
 
 const TodoPost = styled.div`
 width: 500px
@@ -83,5 +81,4 @@ export default function TodoListDate({today, tomorrow, todos, setTodos}) {
     </TodoPost>
   )
 }
-
 
