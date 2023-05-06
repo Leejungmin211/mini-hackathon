@@ -1,31 +1,35 @@
-import { useState, useEffect } from "react"
-import styled from "styled-components"
-import TodoListDate from "../component/TodoListDate"
+import { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import TodoListDate from '../component/TodoListDate';
 
 const Section = styled.section`
-height: 100%;
-overflow: auto;
-display: flex;
-justify-content: center;
-`
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+`;
 export default function TodoList() {
-  const today = koreaDate()
-  const tomorrow = koreaNextDate()
+  const today = koreaDate();
+  const tomorrow = koreaNextDate();
   const [todos, setTodos] = useState(() => readTodos());
-    
+
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
 
-  return(
-      <Section>
-        <TodoListDate today={today} tomorrow={tomorrow} todos={todos} setTodos={setTodos}/>   
-      </Section>
-    )
+  return (
+    <Section>
+      <TodoListDate
+        today={today}
+        tomorrow={tomorrow}
+        todos={todos}
+        setTodos={setTodos}
+      />
+    </Section>
+  );
 }
 
 function readTodos() {
-  console.log('readTodos');
   const todos = localStorage.getItem('todos');
   return todos ? JSON.parse(todos) : [];
 }
@@ -40,13 +44,13 @@ function koreaDate() {
   const dayName = today.toLocaleDateString('ko-KR', {
     weekday: 'long',
   });
-  
+
   return `${dateString} ${dayName}`;
 }
 
 function koreaNextDate() {
   const today = new Date();
-  const tomorrow = new Date(today.setDate(today.getDate() +1));
+  const tomorrow = new Date(today.setDate(today.getDate() + 1));
   const dateString = tomorrow.toLocaleDateString('ko-KR', {
     year: 'numeric',
     month: 'long',
@@ -55,7 +59,6 @@ function koreaNextDate() {
   const dayName = tomorrow.toLocaleDateString('ko-KR', {
     weekday: 'long',
   });
-  
+
   return `${dateString} ${dayName}`;
 }
-
