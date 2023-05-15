@@ -10,9 +10,11 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
 `;
+
 export default function TodoList() {
   const today = new Date();
   const tomorrow = addDays(today, +1);
+  // eslint-disable-next-line no-use-before-define
   const [todos, setTodos] = useState(() => readTodos());
 
   const formattedToday = format(today, 'yyyy년 M월 d일 (iii)', {

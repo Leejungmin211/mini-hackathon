@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ol, ul {
+	list-style: none;
+}
+
+button {
+	background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer
+}
+
+:root {
+  --color-lightpink: #fcc8d1;
+  --color-pink: #ffbbc7;
+  --color-violet: #c283ef;
+  --color-blue: #0a69e9;
+  --color-white: #FFFFFF;
+  --color-black: #222;
+  /* TODO 사용법 >>> color: var(--brand-color); */
+}

@@ -12,7 +12,7 @@ const BodyWrapper = styled.div`
 const Top = styled.div`
 margin-top: 30px;
 > h1{
-    color:  #EDEDED;
+    color: #EDEDED;
     text-align: center;
     font-size: 9em;
     margin: 0;
@@ -20,11 +20,11 @@ margin-top: 30px;
 }
 > h3{
     font-size: 2em;
-text-transform: uppercase;
-text-align: center;
-color: #BFC0C0;
-margin-top: -20px;
-font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: #BFC0C0;
+    margin-top: -20px;
+    font-weight: 900;
 }
 `;
 const ButtonBox = styled.div`
