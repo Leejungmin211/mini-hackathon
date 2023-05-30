@@ -3,9 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
-  height: 250px;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   position: relative;
@@ -28,7 +26,7 @@ const NavStyle = styled(NavLink)`
     color: #afafaf;
   }
 `;
-export default function BottomNav() {
+export default function Header() {
   return (
     <Nav>
       <NavStyle to="/">
